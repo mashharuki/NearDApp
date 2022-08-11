@@ -101,3 +101,4 @@ Done deploying to dev-1660204085773-49134722844982
 #### 参考文献
 1. [Create Near AppのNPMページ](https://www.npmjs.com/package/create-near-app?activeTab=readme)
 2. [BlockExplorer](https://explorer.testnet.near.org/)
+3. [Nearprotocolの開発者ドキュメント](https://docs.near.org/develop/quickstart-guide)

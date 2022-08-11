@@ -1,7 +1,7 @@
 [package]
-name = "hello_near"
+name = "hotel_booking"
 version = "1.0.0"
-authors = ["Near Inc <hello@near.org>"]
+authors = ["mashharuki"]
 edition = "2021"
 
 [lib]
