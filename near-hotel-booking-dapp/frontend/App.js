@@ -3,8 +3,8 @@ import React from 'react';
 
 import './assets/global.css';
 
-import { getGreetingFromContract, setGreetingOnContract } from './near-api';
-import { EducationalText, SignInPrompt, SignOutButton } from './ui-components';
+import { getGreetingFromContract, setGreetingOnContract } from './assets/js/near/near-api';
+import { EducationalText, SignInPrompt, SignOutButton } from './assets/js/ui-components';
 
 
 export default function App() {
