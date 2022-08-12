@@ -1,69 +1,27 @@
-import 'regenerator-runtime/runtime';
-import React from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./assets/js/pages/Home";
+import Search from "./assets/js/pages/Search";
+import GuestBookedList from "./assets/js/pages/GuestBookedList";
+import ManageRooms from "./assets/js/pages/ManageRooms";
+import ManageBookings from "./assets/js/pages/ManageBookings";
+import NavBar from "./assets/js/components/NavBar";
 
-import './assets/global.css';
-
-import { getGreetingFromContract, setGreetingOnContract } from './assets/js/near/near-api';
-import { EducationalText, SignInPrompt, SignOutButton } from './assets/js/ui-components';
-
-
-export default function App() {
-  const [valueFromBlockchain, setValueFromBlockchain] = React.useState();
-
-  const [uiPleaseWait, setUiPleaseWait] = React.useState(true);
-
-  // Get blockchian state once on component load
-  React.useEffect(() => {
-    getGreetingFromContract()
-      .then(setValueFromBlockchain)
-      .catch(alert)
-      .finally(() => {
-        setUiPleaseWait(false);
-      });
-  }, []);
-
-  /// If user not signed-in with wallet - show prompt
-  if (!window.walletConnection.isSignedIn()) {
-    // Sign-in flow will reload the page later
-    return <SignInPrompt greeting={valueFromBlockchain}/>;
-  }
-
-  function changeGreeting(e) {
-    e.preventDefault();
-    setUiPleaseWait(true);
-    const { greetingInput } = e.target.elements;
-    setGreetingOnContract(greetingInput.value)
-      .then(getGreetingFromContract)
-      .then(setValueFromBlockchain)
-      .catch(alert)
-      .finally(() => {
-        setUiPleaseWait(false);
-      });
-  }
-
+/**
+ * Appコンポーネント
+ */
+const App = () => {
   return (
-    <>
-      <SignOutButton accountId={window.accountId}/>
-      <main className={uiPleaseWait ? 'please-wait' : ''}>
-        <h1>
-          The contract says: <span className="greeting">{valueFromBlockchain}</span>
-        </h1>
-        <form onSubmit={changeGreeting} className="change">
-          <label>Change greeting:</label>
-          <div>
-            <input
-              autoComplete="off"
-              defaultValue={valueFromBlockchain}
-              id="greetingInput"
-            />
-            <button>
-              <span>Save</span>
-              <div className="loader"></div>
-            </button>
-          </div>
-        </form>
-        <EducationalText/>
-      </main>
-    </>
+    <BrowserRouter>
+      <NavBar />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/search/:date' element={<Search />} />
+        <Route path='/booked-list' element={<GuestBookedList />} />
+        <Route path='/manage-rooms' element={<ManageRooms />} />
+        <Route path='/manage-bookings' element={<ManageBookings />} />
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
+
+export default App;

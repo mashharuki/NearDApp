@@ -1,4 +1,4 @@
-import { signInWithNearWallet, signOutNearWallet } from './near/near-api';
+import { signInWithNearWallet, signOutNearWallet } from './near/utils';
 import React from 'react';
 
 export function SignInPrompt({greeting}) {

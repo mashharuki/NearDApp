@@ -1,15 +1,20 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import App from './App';
-import { initContract } from './assets/js/near/near-api';
+import React from "react";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import "bootstrap";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import App from "./App";
+import { initContract } from "./assets/js/near/utils";
 
-const reactRoot = createRoot(document.querySelector('#root'));
+const container = document.querySelector("#root");
+const root = createRoot(container);
 
 window.nearInitPromise = initContract()
   .then(() => {
-    reactRoot.render(<App />);
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>;
+    root.render(<App tab='home' />);
   })
-  .catch(e => {
-    reactRoot.render(<div style={{color: 'red'}}>Error: <code>{e.message}</code></div>);
-    console.error(e);
-  });
+  .catch(console.error);

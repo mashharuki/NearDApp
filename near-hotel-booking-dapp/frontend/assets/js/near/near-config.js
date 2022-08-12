@@ -1,5 +1,10 @@
 const CONTRACT_NAME = process.env.CONTRACT_NAME;
 
+/**
+ * getConfig Component
+ * @param {*} env ContractName
+ * @returns 
+ */
 export function getConfig(env) {
   switch (env) {
 

@@ -16,7 +16,6 @@ const GAS = 100000000000000;
 // read config file
 const nearConfig = getConfig(process.env.NODE_ENV || 'development');
 
-
 /**
  * initialization fucttion for Smartcontract and global variable
  */
