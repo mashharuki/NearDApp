@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "(MIT AND Apache-2.0)",
   "scripts": {
-    "start": "echo The app is starting! It will automatically open in your browser when ready && env-cmd -f ./neardev/dev-account.env parcel frontend/index.html --open",
+    "start": "echo The app is starting! It will automatically open in your browser when ready && cd frontend && npm run start",
     "deploy": "npm run build:contract && cd contract && near dev-deploy --wasmFile ./target/wasm32-unknown-unknown/release/hello_near.wasm",
     "build": "npm run build:contract && npm run build:web",
     "build:web": "cd frontend && npm run build",
