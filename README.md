@@ -287,7 +287,44 @@ Done deploying to dev-1660204085773-49134722844982
 
 <img src="./assets/imgs/start.png">
 
-#### 参考文献
+### Nrtlifyでデプロイする方法
+
+1. `netlify login`
+2. `netlify deploy --prod`  
+
+CLI形式でいくつか質問されるので自分のプロジェクトにあう様に回答していく。  
+うまく行けば下記の様な内容が出力される。 
+
+```cmd
+This folder isn't linked to a site yet
+? What would you like to do? +  Create & configure a new site
+? Team: mashharuki
+Choose a unique site name (e.g. netlify-thinks-mashharuki-is-great.netlify.app) or leave it blank for a random name. You can update the site name later.
+? Site name (optional): naer-hotel-booking-dapp
+
+Please provide a publish directory (e.g. "public" or "dist" or "."):
+/Users/harukikondo/git/NearDApp/near-hotel-booking-dapp
+? Publish directory /Users/harukikondo/git/NearDApp/near-hotel-booking-dapp/frontend/dist
+Deploy path:        /Users/harukikondo/git/NearDApp/near-hotel-booking-dapp/frontend/dist
+Configuration path: /Users/harukikondo/git/NearDApp/near-hotel-booking-dapp/netlify.toml
+Deploying to main site URL...
+✔ Finished hashing 
+✔ CDN requesting 7 files
+✔ Finished uploading 7 assets
+✔ Deploy is live!
+
+Logs:              https://app.netlify.com/sites/naer-hotel-booking-dapp/deploys/62f71bc5b952c7553dfddd1f
+Unique Deploy URL: https://62f71bc5b952c7553dfddd1f--naer-hotel-booking-dapp.netlify.app
+Website URL:       https://naer-hotel-booking-dapp.netlify.app
+```
+
+うまく行けば、Webに公開されてローカルにデプロイした時と同じ様にアクセスすることができる!! 
+
+<img src= "./assets/imgs/deploy.png">
+
+##### ============================================
+
+### 参考文献
 1. [Create Near AppのNPMページ](https://www.npmjs.com/package/create-near-app?activeTab=readme)
 2. [BlockExplorer](https://explorer.testnet.near.org/)
 3. [Nearprotocolの開発者ドキュメント](https://docs.near.org/develop/quickstart-guide)
@@ -298,3 +335,5 @@ Done deploying to dev-1660204085773-49134722844982
 8. [NearUniversityJapan](https://near-university-japan.super.site/)
 9. [booking1.dev-1660204085773-49134722844982 Contract](https://explorer.testnet.near.org/accounts/booking1.dev-1660204085773-49134722844982)
 10. [ReactBootStrap](https://react-bootstrap.netlify.app/components/buttons/#rb-docs-content)
+11. [Netlify](https://www.netlify.com/)
+12. [near-hotel-booking-dapp](https://naer-hotel-booking-dapp.netlify.app)
