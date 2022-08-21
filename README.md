@@ -338,6 +338,10 @@ Website URL:       https://naer-hotel-booking-dapp.netlify.app
 
 <img src="./assets/imgs/manageroom.png">
 
+4. Connect Wallet画面
+
+<img src="./assets/imgs/connectwallet.png">  
+
 ### 参考文献
 1. [Create Near AppのNPMページ](https://www.npmjs.com/package/create-near-app?activeTab=readme)
 2. [BlockExplorer](https://explorer.testnet.near.org/)
