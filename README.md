@@ -324,6 +324,20 @@ Website URL:       https://naer-hotel-booking-dapp.netlify.app
 
 ##### ============================================
 
+### 画面例
+
+1. 予約管理画面
+
+<img src="./assets/imgs/managebook.png">
+
+2. 予約管理画面(1件も予約がない状態)
+
+<img src="./assets/imgs/nobookingdata.png">
+
+3. 部屋の状況確認画面
+
+<img src="./assets/imgs/manageroom.png">
+
 ### 参考文献
 1. [Create Near AppのNPMページ](https://www.npmjs.com/package/create-near-app?activeTab=readme)
 2. [BlockExplorer](https://explorer.testnet.near.org/)
