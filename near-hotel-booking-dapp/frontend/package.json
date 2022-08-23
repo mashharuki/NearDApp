@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "(MIT AND Apache-2.0)",
   "scripts": {
-    "start": "echo The app is starting! && env-cmd -f ../contract/neardev/dev-account.env parcel index.html --open",
+    "start": "echo The app is starting! && env-cmd -f ./../contract/neardev/dev-account.env parcel index.html --open",
     "build": "parcel build index.html --public-url ./"
   },
   "devDependencies": {
@@ -21,8 +21,10 @@
     "typescript": "^4.7.2"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "bootstrap": "^5.2.0",
     "bootstrap-icons": "^1.9.1",
+    "form-data": "^4.0.0",
     "near-api-js": "^0.44.2",
     "react": "^18.1.0",
     "react-bootstrap": "^2.5.0",
